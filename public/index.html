@@ -1,12 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Catálogo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #output {
+            margin-top: 20px;
+            background: #1e293b;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 15px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background: #334155;
+        }
+
+        .nota {
+            font-weight: bold;
+            color: #22c55e;
+        }
+
+        .nao {
+            color: #ef4444;
+        }
+
+        select {
+            padding: 8px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    
+
+<h1>🎬 Catálogo de Filmes e Séries</h1>
+<p>Abra o Console (F12) para ver os resultados</p>
+
+<label>Filtrar:</label>
+<select id="filtro">
+    <option value="todos">Todos</option>
+    <option value="filme">Filmes</option>
+    <option value="serie">Séries</option>
+</select>
+
+<div id="lista" class="grid"></div>
+
+<div id="output"></div>
+
+<script src="script.js"></script>
 </body>
 </html>
